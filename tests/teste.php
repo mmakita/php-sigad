@@ -7,7 +7,7 @@ $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 
 //require 'src/TokenGenerator/TokenGenerator.php';
-use PHP_Sigad\TokenGenerator;
+use PHPSigad\TokenGenerator;
 
 $tk_gen = new TokenGenerator();
 
