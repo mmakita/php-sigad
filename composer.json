@@ -12,7 +12,8 @@
     "require": {
       "php" : ">=7.3",
       "web-token/jwt-framework": "2.0",
-        "vlucas/phpdotenv": "^5.3"
+        "vlucas/phpdotenv": "^5.3",
+        "nategood/httpful": "^0.3.2"
     
     },
     "autoload": {

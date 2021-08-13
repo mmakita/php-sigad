@@ -3,13 +3,17 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 
-$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__.'/..');
-$dotenv->load();
+//$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__.'/..');
+//$dotenv->load();
 
 //require 'src/TokenGenerator/TokenGenerator.php';
-use PHPSigad\TokenGenerator;
+use PHPSigad\PHPSigad;
 
-$tk_gen = new TokenGenerator();
+$sigad = new PHPSigad('mmakita');
 
 
-print $tk_gen->getToken('mmakita')."\n";
+print $sigad->token."\n";
+
+
+use PHPSigad\Protocolo;
+print Protocolo::consultarDocumento();
