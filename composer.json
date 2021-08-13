@@ -1,0 +1,23 @@
+{
+    "name": "sigad/php-sigad",
+    "description": "Pacote para acessar dados do Sigad de maneira mais fácil em PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Akita",
+            "email": "mmakita@unicamp.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+      "php" : ">=7.3",
+      "web-token/jwt-framework": "2.0",
+        "vlucas/phpdotenv": "^5.3"
+    
+    },
+    "autoload": {
+        "psr-0": {
+            "PHP_Sigad": "src/"
+        }
+    }
+}
