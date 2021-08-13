@@ -1,6 +1,6 @@
 <?php
 
-namespace PHP_Sigad;
+namespace PHPSigad\TokenGenerator;
 
 use Jose\Component\Encryption\Serializer\CompactSerializer;
 use Jose\Component\Core\AlgorithmManager;
