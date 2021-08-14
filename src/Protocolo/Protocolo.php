@@ -6,10 +6,16 @@ use PHPSigad\PHPSigad;
 
 class Protocolo
 {
-    static function consultarDocumento($numeroDocumento){
-        $sigad = new PHPSigad();
+    var $user;
 
-        $igad->uri .= '/protocolo?numeroDocumento='.$numeroDocumento;
+    function __construct($user){
+        $this->user = $user;
+    }
+
+    function consultarDocumento($numeroDocumento){
+        $sigad = new PHPSigad($this->user);
+
+        $sigad->uri .= '/protocolo?numeroDocumento='.$numeroDocumento;
 
         return $sigad->sendRequest();
     }

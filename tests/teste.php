@@ -15,5 +15,6 @@ $sigad = new PHPSigad('mmakita');
 print $sigad->token."\n";
 
 
-use PHPSigad\Protocolo;
-print Protocolo::consultarDocumento();
+use PHPSigad\Protocolo\Protocolo;
+$protocolo = new Protocolo('mmakita');
+var_dump( $protocolo->consultarDocumento('29827/2013'));

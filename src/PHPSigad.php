@@ -17,21 +17,21 @@ class PHPSigad
     var $body;
 
     function __construct($user){
-        $dotenv = Dotenv::createImmutable(__DIR__.'/../');
+        $dotenv = Dotenv::createImmutable('./');
         $dotenv->load();
 
         $this->uri = $_ENV['APIURI'];
 
         $tk_gen = new TokenGenerator();
 
-        $this->token = $tk_gen->getToken($user)."\n";
+        $this->token = $tk_gen->getToken($user);
     }
 
     function sendRequest(){
         return Request::get($this->uri)
             ->addHeaders(array(
                 'Content-Type' => 'application/json',
-                'Authorization' => 'Bearer '.$this->token,
+                'Authorization' => 'Bearer '.substr($this->token,0),
                 'Sistema' => $_ENV['SISTEMA']
             ))
             ->send();
