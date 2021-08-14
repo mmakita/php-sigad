@@ -1,8 +1,7 @@
 <?php
 
-namespace PHPSigad\Protocolo;
+namespace PHPSigad;
 
-use PHPSigad\PHPSigad;
 
 class Protocolo
 {
