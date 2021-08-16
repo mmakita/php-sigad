@@ -7,9 +7,12 @@ use PHPSigad\PHPSigad;
 $sigad = new PHPSigad('mmakita');
 
 
-print $sigad->token."\n";
+print 'token gerado :'.$sigad->token."\n";
 
 
 use PHPSigad\Protocolo;
 $protocolo = new Protocolo('mmakita');
-var_dump( $protocolo->consultarDocumento('29827/2013')->body);
+$processo = $protocolo->consultarDocumento('29827/2013');
+
+
+var_dump($processo[0]->classificacaoAssunto->assunto);

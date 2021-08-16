@@ -16,6 +16,11 @@ class PHPSigad
     var $uri;
     var $body;
 
+    /**
+     * Resposta da requisicao
+     */
+    var $response;
+
     function __construct($user){
         $dotenv = Dotenv::createImmutable('./');
         $dotenv->load();
@@ -28,7 +33,7 @@ class PHPSigad
     }
 
     function sendRequest(){
-        return Request::get($this->uri)
+        $this->response =  Request::get($this->uri)
             ->addHeaders(array(
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer '.substr($this->token,0),
