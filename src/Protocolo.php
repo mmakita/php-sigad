@@ -10,11 +10,20 @@ class Protocolo extends PHPSigad
     }
 
     function consultarDocumento($numeroDocumento){
-
-        $this->uri .= '/protocolo?numeroDocumento='.$numeroDocumento;
-
+        $this->setRequestMethod('get');
+        $this->setUri('/protocolo?numeroDocumento='.$numeroDocumento);
         $this->sendRequest();
 
         return $this->response->body;
+    }
+
+    function autuarProcesso($dadosProcesso){
+        $this->setRequestMethod('post');
+        $this->setUri('/protocolo/processo');
+
+        $this->sendRequest($dadosProcesso);
+
+        return $this->response->body;
+
     }
 }

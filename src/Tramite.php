@@ -10,7 +10,8 @@ class Tramite extends PHPSigad
     }
 
     function consultarTramites($numeroDocumento){
-        $this->uri .= '/tramite?numeroDocumento='.$numeroDocumento;
+        $this->setRequestMethod('get');
+        $this->setUri('/tramite?numeroDocumento='.$numeroDocumento);
 
         $this->sendRequest();
 

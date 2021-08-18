@@ -12,7 +12,8 @@ class Evento extends PHPSigad
     }
 
     function consultarEventos($numeroDocumento){
-        $this->uri .= '/evento?numeroDocumento='.$numeroDocumento;
+        $this->setRequestMethod('get');
+        $this->setUri('/evento?numeroDocumento='.$numeroDocumento);
 
         $this->sendRequest();
 
