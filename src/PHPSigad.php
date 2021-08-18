@@ -15,11 +15,18 @@ class PHPSigad
 
     var $uri;
     var $body;
+    
+    /**
+     * @type string
+     * Username de quem esta fazendo a requisicao
+     */
+    var $user;
 
     /**
      * Resposta da requisicao
      */
     var $response;
+    
 
     function __construct($user){
         $dotenv = Dotenv::createImmutable('./');
@@ -30,6 +37,7 @@ class PHPSigad
         $tk_gen = new TokenGenerator();
 
         $this->token = $tk_gen->getToken($user);
+        $this->user = $user;
     }
 
     function sendRequest(){

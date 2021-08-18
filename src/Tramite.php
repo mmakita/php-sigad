@@ -2,16 +2,15 @@
 
 namespace PHPSigad;
 
-class Protocolo extends PHPSigad
+class Tramite extends PHPSigad
 {
 
     function __construct($user){
         parent::__construct($user);
     }
 
-    function consultarDocumento($numeroDocumento){
-
-        $this->uri .= '/protocolo?numeroDocumento='.$numeroDocumento;
+    function consultarTramites($numeroDocumento){
+        $this->uri .= '/tramite?numeroDocumento='.$numeroDocumento;
 
         $this->sendRequest();
 

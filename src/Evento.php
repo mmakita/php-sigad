@@ -2,16 +2,17 @@
 
 namespace PHPSigad;
 
-class Protocolo extends PHPSigad
+class Evento extends PHPSigad
 {
+
+
 
     function __construct($user){
         parent::__construct($user);
     }
 
-    function consultarDocumento($numeroDocumento){
-
-        $this->uri .= '/protocolo?numeroDocumento='.$numeroDocumento;
+    function consultarEventos($numeroDocumento){
+        $this->uri .= '/evento?numeroDocumento='.$numeroDocumento;
 
         $this->sendRequest();
 
