@@ -17,7 +17,8 @@ use PHPSigad\Protocolo;
 $protocolo = new Protocolo($_ENV['USERNAME_SISE']);
 $processo = $protocolo->consultarDocumento('11525/2021');
 
-var_dump($processo[0]->classificacaoAssunto->assunto);
+var_dump($processo[0]->listaFichaDocumentoDigital); exit();
+
 
 
 use PHPSigad\Evento;
