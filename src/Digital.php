@@ -9,7 +9,7 @@ class Digital extends PHPSigad
         parent::__construct($user);
     }
 
-    function gerarPdf($numeroDocumento, $nomeDocumentoDigital){
+    function gerarPdf($numeroDocumento, $nomeDocumentoDigital=''){
         $this->setRequestMethod('get');
         $this->setUri('/digital/pdf?numeroDocumento='.$numeroDocumento.'&nomeDocumentoDigital='.urlencode($nomeDocumentoDigital));
 
