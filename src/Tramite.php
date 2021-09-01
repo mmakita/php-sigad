@@ -17,4 +17,13 @@ class Tramite extends PHPSigad
 
         return $this->response->body;
     }
+
+    function encaminharDocumento($dadosTramitacao){
+        $this->setRequestMethod('post');
+        $this->setUri('/tramite');
+
+        $this->sendRequest($dadosTramitacao);
+
+        return $this->response->body;
+    }
 }
