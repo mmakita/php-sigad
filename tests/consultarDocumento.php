@@ -17,7 +17,7 @@ use PHPSigad\Protocolo;
 $protocolo = new Protocolo($_ENV['USERNAME_SISE']);
 $processo = $protocolo->consultarDocumento('11902/2021');
 
-var_dump($processo[0]->listaFichaDocumentoDigital); 
+//var_dump($processo[0]->listaFichaDocumentoDigital); 
 
 
 
@@ -32,5 +32,5 @@ use PHPSigad\Tramite;
 $tramite = new Tramite($_ENV['USERNAME_SISE']);
 $tramites_doc = $tramite->consultarTramites('11902/2021');
 
-var_dump($tramites_doc);
+//var_dump($tramites_doc);
 
