@@ -18,9 +18,6 @@ Criar um arquivo .pem com o mesmo nome da variável PEM_FILE
 
 require __DIR__ . '/../vendor/autoload.php';
 
-print 'token gerado :'.$sigad->token."\n";
-
-
 use PHPSigad\Protocolo;
 $protocolo = new Protocolo('mmakita');
 $processo = $protocolo->consultarDocumento('29827/2013');
